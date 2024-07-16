@@ -1,0 +1,25 @@
+
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="push">
+    <h1>Menu</h1>
+    <button (click)="drawer.toggle()" routerLink="/students" mat-raised-button>
+      Students
+    </button>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      <span class="material-symbols-outlined">
+        menu
+        </span>
+
+    </button>
+    <div style="display: flex; flex-direction: column;">
+      <h1>app-dashboard</h1>
+      <router-outlet></router-outlet>
+    </div>
+
+  </div>
+
+
+</mat-drawer-container>
